@@ -39,11 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // === LOGIN (si existe formulario) ===
+
   const loginForm = document.getElementById('loginForm');
   if (loginForm) {
     loginForm.addEventListener('submit', function(e) {
       e.preventDefault();
+            const usuarioCorrecto = "a22300872@ceti.mx";
+      const contrasenaCorrecta = "123";
 
       const correo = document.getElementById('email').value.trim();
       const contrasena = document.getElementById('password').value.trim();
@@ -52,21 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      fetch('http://localhost/biblioteca/login.php', {
-        method: 'POST',
-        body: new URLSearchParams({ correo, contrasena }),
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-      })
-      .then(res => res.json())
-      .then(data => {
-        if (data.success) {
-          alert('Inicio de sesión exitoso');
-          window.location.href = "inicio.html";
-        } else {
-          alert('Error: ' + data.mensaje);
-        }
-      })
-      .catch(err => console.error(err));
+      if (correo === usuarioCorrecto && contrasena === contrasenaCorrecta) {
+        alert("Inicio de sesión exitoso");
+        window.location.href = "libreria.html"; // Aquí redirige
+      } else {
+        alert("Correo o contraseña incorrectos");
+      }
     });
   }
+
 });
