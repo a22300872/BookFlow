@@ -1,0 +1,87 @@
+/* Fondo del modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Fondo oscuro translúcido */
+  backdrop-filter: blur(6px); /* efecto de desenfoque */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor del contenido */
+.modal-contenido {
+  background: linear-gradient(145deg, #ffffff, #f4f4f4);
+  border-radius: 15px;
+  padding: 25px 35px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #333;
+  animation: aparecer 0.3s ease-out;
+  position: relative;
+}
+
+/* Botón cerrar */
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 26px;
+  color: #555;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.cerrar:hover {
+  color: #c0392b;
+}
+
+/* Botones del modal */
+.btnAceptar {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+.btnAceptar:hover {
+  background: #0056b3;
+}
+
+.btnAbrir {
+  background: #560808;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btnAbrir:hover {
+  background: #7a1010;
+}
+
+/* Animación */
+@keyframes aparecer {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+h5 {
+  font-family: 'Montserrat';
+  font-weight:bold;
+}

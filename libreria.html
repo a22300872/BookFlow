@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookFlow | Inicio</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { background-color: #f7f8fc; font-family: 'Poppins', sans-serif; }
+    header { background-color: #212529; color: #fff; padding: 1rem 0; }
+    .hero { text-align: center; padding: 60px 20px; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80') center/cover; color: #fff; border-radius: 8px; margin-bottom: 2rem; animation: fadeIn 2s; }
+    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+    .book-card:hover { transform: scale(1.03); transition: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container d-flex justify-content-between align-items-center">
+      <h3 class="m-0">BookFlow</h3>
+      <div style="max-width: 750px;align-items: end
+      ;" class="container mt-4 mb-3">
+  <input type="text" style="border-radius: 30px;" id="buscador" class="form-control" placeholder="Buscar libro por título, autor o ISBN...">
+</div>
+
+      <nav>
+        <a href="login.html" class="text-white text-decoration-none">Login</a>
+             <a style="margin: 30px;" href="prestamo.html" class="text-white text-decoration-none">Prestamo</a>
+            <a  style="margin: 20px;" href="usuario.html" class="text-white text-decoration-none" > 
+              <i  class="bi bi-gear-fill"></i>
+            
+            </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PORTADA -->
+  <section id="inicio" class="container mt-4">
+    <div class="hero shadow">
+      <h1>Solicita Libros. Conecta Lectores.</h1>
+      <p class="lead">Comparte conocimiento y encuentra nuevas historias cerca de ti.</p>
+    </div>
+
+    <!-- LIBROS DE EJEMPLO -->
+    <h4 class="mt-5 mb-3">Libros Destacados</h4>
+    <div class="row g-3">
+
+      <!-- CARD PLANTILLA (REPETIDA) -->
+      <div class="col-md-4 d-flex">
+        <div class="card book-card shadow-sm p-3">
+          <h5>El Principito</h5>
+          <p class="text-muted mb-1">Antoine de Saint-Exupéry</p>          <h6 class="text-muted small mb-1">ISBN: <a>434123</a> </h6>
+          <p class="small">“Lo esencial es invisible a los ojos.”</p>
+          <img class="mb-2" src="https://imgs.search.brave.com/wHs2Jebd0sm6vx78HGI2ZI8adC09NPIlunbK2JnBXu8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/cGVuZ3VpbmxpYnJv/cy5jb20vbXgvNDAw/MDAwNS1ob21lX2Rl/ZmF1bHQvZWwtcHJp/bmNpcGl0by1jb24t/aWx1c3RyYWNpb25l/cy1kZXNwbGVnYWJs/ZXMteS1lbC10ZXh0/by1pbnRlZ3JvLWRl/LWxhLW9icmEud2Vi/cA">
+          <button class="btn btn-outline-danger btn-sm w-100 btn-intercambio" data-bs-toggle="modal" data-bs-target="#modalIntercambio">Solicitar libro</button>
+        </div>
+      </div>
+
+      <!-- COPIA LAS SIGUIENTES CARDS NORMALES -->
+      <div class="col-md-4 d-flex">
+        <div class="card book-card shadow-sm p-3">
+          <h5>Cien años de soledad</h5>
+          <p class="text-muted mb-1">Gabriel García Márquez</p>
+                    <h6 class="text-muted small mb-1">ISBN: <a>645123</a> </h6>
+          <p class="small">Una historia mágica sobre la familia Buendía.</p>
+          <img class="mb-2" src="https://imgs.search.brave.com/JYH4JxgPvUgRgxZHaPhv-C56zvjs2-GaYz6x6JJtdaU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuZm5hYy1zdGF0/aWMuY29tL211bHRp/bWVkaWEvSW1hZ2Vz/L0VTL05SL2FhLzAy/LzAzLzE5NzI5MC8x/NTQwLTEuanBn">
+          <button class="btn btn-outline-danger btn-sm w-100 btn-intercambio" data-bs-toggle="modal" data-bs-target="#modalIntercambio">Solicitar libro</button>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="card book-card shadow-sm p-3">
+          <h5>1984</h5>
+          <p class="text-muted mb-1">George Orwell</p>          
+          <h6 class="text-muted small mb-1">ISBN: <a>123</a> </h6>
+          <p class="small">Una visión distópica sobre el control y la libertad.</p>
+
+          <img class="mb-2" src="https://imgs.search.brave.com/OuU7AXL1U6PYkurd0KDDE-GSycVVC3tsHR3vRHZLEe0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXNzbDQuY2FzYWRl/bGxpYnJvLmNvbS9h/L2wvczUvNDQvOTc4/MDE0MTAzNjE0NC53/ZWJw">
+          <button class="btn btn-outline-danger btn-sm w-100 btn-intercambio" data-bs-toggle="modal" data-bs-target="#modalIntercambio">Solicitar libro</button>
+        </div>
+      </div>
+       <!-- CARD PLANTILLA (REPETIDA) -->
+      <div class="col-md-4 d-flex">
+        <div class="card book-card shadow-sm p-3">
+          <h5>La sombra del viento</h5>
+          <p class="text-muted mb-1">Carlos Ruiz Zafón</p>
+                    <h6 class="text-muted small mb-1">ISBN: <a>12413</a> </h6>
+          <p class="small">“Misterio y literatura en la Barcelona de los años 40.”</p>
+          <img class="mb-2" src="https://imgs.search.brave.com/ZRXAeOk13fGjHguf9vUBcJJ2JVeUA78lN_719BD-_cM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2NiLzFk/LzEwL2NiMWQxMGJk/NjQyNGEyZjBiNTc3/YzcyN2FhOWI1ZGI1/LmpwZw">
+          <button class="btn btn-outline-danger btn-sm w-100 btn-intercambio" data-bs-toggle="modal" data-bs-target="#modalIntercambio">Solicitar libro</button>
+        </div>
+      </div>
+
+      <!-- COPIA LAS SIGUIENTES CARDS NORMALES -->
+      <div class="col-md-4 d-flex">
+        <div class="card book-card shadow-sm p-3">
+          <h5>Orgullo y prejuicio</h5>
+          <p class="text-muted mb-1">Jane Austen</p>
+                    <h6 class="text-muted small mb-1">ISBN: <a>123342</a> </h6>
+          <p class="small">Clásico romance y crítica social de la Inglaterra del siglo XIX.</p>
+          <img class="mb-2" src="https://imgs.search.brave.com/c9fqvlZP_aq3xdqU8ySv5_rmfQfHWAjCGLcbYhk6afI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzkwOTAwOS1NQ084/NDc4NDAzODU4NF8w/NTIwMjUtVi53ZWJw">
+          <button class="btn btn-outline-danger btn-sm w-100 btn-intercambio" data-bs-toggle="modal" data-bs-target="#modalIntercambio">Solicitar libro</button>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="card book-card shadow-sm p-3">
+          <h5>El código Da Vinci</h5>
+          <p class="text-muted mb-1">Dan Brown</p>
+                    <h6 class="text-muted small mb-1">ISBN: <a>24142323</a> </h6>
+          <p class="small">Thriller lleno de símbolos y enigmas religiosos.</p>
+          <img class="mb-2" src="https://imgs.search.brave.com/eEOELpT362m0AqANwYXvBwYJeCvymFUyrkYOzWeZOrQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMyLnBlbmd1aW5y/YW5kb21ob3VzZS5j/b20vY292ZXIvOTc4/MDU5MzYxMzExNQ">
+          <button class="btn btn-outline-danger btn-sm w-100 btn-intercambio" data-bs-toggle="modal" data-bs-target="#modalIntercambio">Solicitar libro</button>
+        </div>
+      </div>
+      
+
+      <!-- Puedes duplicar más cards aquí -->
+
+    </div>
+  </section>
+
+
+  <!-- ✅ MODAL BOOTSTRAP ✅ -->
+  <div class="modal fade" id="modalIntercambio" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Solicitar libro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          ¿Quieres solicitar un libro:
+          <strong id="nombreLibroModal"></strong>?
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button class="btn btn-primary">Enviar solicitud</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap + Script del modal -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.querySelectorAll('.btn-intercambio').forEach(boton => {
+      boton.addEventListener('click', () => {
+        let titulo = boton.parentElement.querySelector('h5').innerText;
+        document.getElementById('nombreLibroModal').innerText = titulo;
+      });
+    });
+  </script>
+<script src="script.js"></script>
+</body>
+</html>

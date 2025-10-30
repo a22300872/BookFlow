@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookFlow | Préstamos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body { background-color: #f7f8fc; font-family: 'Poppins', sans-serif; }
+    header { background-color: #212529; color: #fff; padding: 1rem 0; }
+    .card:hover { transform: scale(1.02); transition: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container d-flex justify-content-between align-items-center">
+      <h3 class="m-0">BookFlow</h3>
+      <nav>
+        <a href="libreria.html" class="text-white text-decoration-none me-3">Inicio</a>
+        <a href="usuario.html" class="text-white text-decoration-none">
+          <i class="bi bi-gear-fill"></i>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO -->
+  <section class="container mt-4">
+    <h2 class="mb-4">Mis Préstamos</h2>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs" id="prestamosTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pendientes-tab" data-bs-toggle="tab" data-bs-target="#pendientes" type="button" role="tab">Pendientes</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="historial-tab" data-bs-toggle="tab" data-bs-target="#historial" type="button" role="tab">Historial</button>
+      </li>
+    </ul>
+
+    <div class="tab-content mt-3">
+      
+      <!-- PRESTAMOS PENDIENTES -->
+      <div class="tab-pane fade show active" id="pendientes" role="tabpanel">
+        <div class="list-group">
+          <div class="list-group-item d-flex justify-content-between align-items-center shadow-sm mb-2">
+            <div>
+              <h5>El Principito</h5>
+              <p class="mb-0 text-muted">Fecha de entrega: 05/11/2025</p>
+            </div>
+            <button class="btn btn-sm btn-outline-danger">Cancelar</button>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center shadow-sm mb-2">
+            <div>
+              <h5>1984</h5>
+              <p class="mb-0 text-muted">Fecha de entrega: 10/11/2025</p>
+            </div>
+            <button class="btn btn-sm btn-outline-danger">Cancelar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- HISTORIAL DE PRESTAMOS -->
+      <div class="tab-pane fade" id="historial" role="tabpanel">
+        <div class="list-group">
+          <div class="list-group-item shadow-sm mb-2">
+            <h5>Cien años de soledad</h5>
+            <p class="mb-0 text-muted">Entregado el: 20/10/2025</p>
+          </div>
+          <div class="list-group-item shadow-sm mb-2">
+            <h5>La sombra del viento</h5>
+            <p class="mb-0 text-muted">Entregado el: 15/10/2025</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
